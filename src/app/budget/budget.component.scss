@@ -1,0 +1,22 @@
+.budget-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.budget-container > * {
+  width: 100%;
+}
+
+.budget-right-align {
+  text-align: right;
+}
+
+input.budget-right-align::-webkit-outer-spin-button,
+input.budget-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.budget-right-align {
+  -moz-appearance: textfield;
+}
