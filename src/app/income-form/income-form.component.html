@@ -1,0 +1,22 @@
+<div class="mat-typography">
+  <h2>Income</h2>
+</div>
+
+<form #income="ngForm" (ngSubmit)="onSubmit(income.value)" class="budget-container">
+
+  <mat-form-field>
+    <input matInput type="text" name="description" placeholder="Description" [(ngModel)]="income.description" class="budget-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <mat-label>Description</mat-label>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input matInput type="number" name="amount" placeholder="Amount" [(ngModel)]="income.amount" class="budget-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <mat-label>Amount</mat-label>
+  </mat-form-field>
+
+  <button type="submit" [disabled]="!income.valid" mat-raised-button color="accent">Submit</button>
+
+</form>

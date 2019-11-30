@@ -9,12 +9,18 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BudgetComponent } from './budget/budget.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BalanceComponent } from './balance/balance.component';
+import { IncomeFormComponent } from './income-form/income-form.component';
+import { ExpesneFormComponent } from './expesne-form/expesne-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     BudgetComponent,
+    BalanceComponent,
+    IncomeFormComponent,
+    ExpesneFormComponent,
   ],
   imports: [
     BrowserModule,
