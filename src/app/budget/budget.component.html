@@ -1,4 +1,4 @@
-<form #budget="ngForm" (ngSubmit)="onSubmit(budget.value)" class="budget-container">
+<form #budgetForm="ngForm" (ngSubmit)="onSubmit()" class="budget-container">
 
   <mat-form-field>
     <input matInput type="number" name="income" placeholder="Income" [(ngModel)]="budget.income" class="budget-right-align">
@@ -12,6 +12,12 @@
     <mat-label>Expenses</mat-label>
   </mat-form-field>
 
-  <button type="submit" [disabled]="!budget.valid" mat-raised-button color="accent">Submit</button>
+  <mat-form-field>
+    <input disabled matInput type="number" name="balance" placeholder="Balance" value="{{ balance }}" class="budget-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <mat-label>Balance</mat-label>
+  </mat-form-field>
+
+  <button type="submit" [disabled]="!budgetForm.valid" mat-raised-button color="accent">Save</button>
 
 </form>

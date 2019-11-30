@@ -13,14 +13,24 @@ export class BudgetComponent implements OnInit {
   constructor(private budgetService: BudgetService) {
   }
 
+  get balance() {
+    return this.budget.income - this.budget.expenses;
+  }
+
   ngOnInit() {
+    this.budget = this.budgetService.getBudget();
   }
 
-  setBudget(budget: Budget): void {
-    this.budgetService.setBudget(budget);
+  setBudget(): void {
+    this.budgetService.setBudget(this.budget);
   }
 
-  onSubmit(budget: Budget): void {
-    this.setBudget(budget);
+  saveBudget(): void {
+    this.budgetService.saveBudget();
+  }
+
+  onSubmit(): void {
+    this.setBudget();
+    this.saveBudget();
   }
 }

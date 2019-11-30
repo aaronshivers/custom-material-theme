@@ -1,4 +1,3 @@
-export interface Budget {
-  income: number;
-  expenses: number;
+export class Budget {
+  constructor(public income: number, public expenses: number) {}
 }
